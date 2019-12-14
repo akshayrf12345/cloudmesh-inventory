@@ -37,7 +37,7 @@ class Host (object):
         return results
 
     @staticmethod
-    def scp(source, destinations, output="lines", dryrun=False):
+    def rsync(source, destinations, output="lines", dryrun=False):
         """
 
         :param names:
@@ -48,7 +48,7 @@ class Host (object):
 
         results = []
         for destination in destinations:
-            command = (f"scp  {source} {destination}")
+            command = (f"rsync  {source} {destination}")
             # result = command.format(name=name)
 
             print (command)
